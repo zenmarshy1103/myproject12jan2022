@@ -1,18 +1,51 @@
-section {
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%
+}
+
+div {
     display: flex;
-    gap: 20px;
+    justify-content: center;
     align-items: center;
+    /* width: 100px; */
+    /* height: 100px;  */
+    background-color: lightgreen;
+    font-size: 3rem;
+
 }
 
-p {
-    flex-basis: 70%;
+article {
+    /* display: flex; */
+    /* display: grid;
+    grid-auto-flow: column;
+    gap: 30px; */
+    
 }
 
-img {
-    width: 100%;
-    flex-basis: 40%;
+section { 
+    height: 100%;
+    /* display: flex; */    
+    display: grid;
+    gap: 10px;    
+    background-color: black;
+
+    /*DO NOT use % for sizing grid*/
+    /* grid-template-columns: 300px 300px 300px; 
+    grid-template-rows: 200px 200px 200px; 
+    grid-auto-flow: column;
+    grid-auto-rows: 300px;
+     */
+
+     /*Always use columns or just use grid-auto-flow*/
+     /* grid-template-columns: repeat(3, 300px); */
+     /* grid-template-rows: repeat(3, 200px); */
+
+     /* 1fraction*/
+     /* grid-template-columns: 4fr 3fr 3fr;   */
+     grid-template-columns: 100px 1fr 200px;
+     grid-template-rows: 100px 1fr 150px;
 }
 
-figure {
-    flex-basis: 30%;
-}
