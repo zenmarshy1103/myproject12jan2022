@@ -1,0 +1,18 @@
+section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+p {
+    flex-basis: 70%;
+}
+
+img {
+    width: 100%;
+    flex-basis: 40%;
+}
+
+figure {
+    flex-basis: 30%;
+}
