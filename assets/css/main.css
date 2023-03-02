@@ -6,39 +6,59 @@ html, body {
     height: 100%
 }
 
-div {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    width: 100px;
-    height: 100px; 
-    background-color: lightgreen;
-    font-size: 3rem;
-    color: white;
-
-}
-
-section { 
-    display: grid;
-    height: 100%;
-    gap: 3px;
-    /* row-gap: 30px;
-    column-gap: 1px; */
-    
-    /* grid-template-columns: 100px 100px 100px;
-    grid-template-columns: 100px 100px 100px;
+header {
+    background-color: pink;
+    display: flex;
     justify-content: space-evenly;
-    align-content: space-evenly; */
-    
-     grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows: 1fr 1fr 1fr;
-     justify-items: center;
-     align-items: center;
+    align-items: center;
+
 }
 
-.five {
-    background-color: red;
-    align-self: end;
-    justify-self: end;
+main {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
 }
 
+
+/*Media Querry - set the template when the width of the screen showing on the media is at certain width*/
+@media (max-width: 1000px) {
+    main{
+        /*2 x 3*/
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr 1fr; */
+    }
+}
+
+@media (min-width: 1000px) {
+    main{
+        /*3 x 2*/
+        grid-template-columns: 1fr 1fr 1fr;  
+        /* grid-template-rows: 1fr 1fr; */
+    }
+}
+
+footer {
+    display: grid;
+    background-color: darkgrey;
+    color: white;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: center;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 100px 1fr 150px;
+    grid-template-columns: 1fr;
+}
